@@ -14,12 +14,44 @@
 		<link rel="stylesheet" href="css/style2.css">
 		<!--<script>alert("hello world!");</script>-->
 		<script>
-			var name="trump";
+			var name="Trump";
 			var age=70;
 			var message="Hello@"+name+"american"+age+"president";
-			//alert(message);
-			//var message1="安全警告！此浏览器功能专供开发者使用。\n请不要在此粘贴执行任何内容，这可能会导致您的账户受到攻击，给您带来损失!\n   ###   ###\n###   ###   ###\n   ###   ###";
-			//console.log(message1);
+			//alert(message.toUpperCase());
+			//alert(name.toLowerCase());
+			// var arr=[1,2,3];
+			// arr[1]="AAA";
+			// alert(arr.length+arr[0]+arr[1]+arr[2]);
+			var arr = [1, 2];
+			arr.push('A', 'B'); //向数组后添加AB
+			arr.pop();//删除数据最后一位
+			arr.unshift('C','d');//向数组最前面添加cd
+			arr.shift();//删除数组最前面的一位
+			arr.sort();//数组排序
+			arr.reverse();//元素排序反向
+			//console.log(arr);
+
+			//var AmericanCompany=['Apple','Microsoft','Google','Aamzon','Adobe'];
+			//AmericanCompany.splice(2,3,'Tesla','Autodesk','Facebook','Twitter'); //从索引2开始删除3个元素，添加三个元素
+			//AmericanCompany.splice(2,2); //只删除不添加元素
+			//AmericanCompany.splice(2,0,'Taylor','Mars'); //只添加不删除
+			//var ChineseCompany=AmericanCompany.concat(["百度","腾讯","阿里"]);
+			//var Fuck=[[1,2,3],[100,200,300],'/'];
+			//console.log(Fuck);
+			//console.log(Fuck.join('@'));
+			//console.log(Fuck[1][1]);//取得第二个数组里的第二个元素
+
+			//var tongxue=['小明', '小红', '大军', '阿黄'];
+			//alert('欢迎'+tongxue[0]+','+tongxue[1]+','+tongxue[2]+'和'+tongxue[3]+'同学！');
+
+			//var Try = ['A', 'B', 'C'];
+			//console.log(Try.concat(1, 2, [3, 4]));
+			//console.log(ChineseCompany.join('-'));//每个元素用指定的字符串连接起来
+			//console.log(AmericanCompany);
+
+
+			var message1="安全警告！此浏览器功能专供开发者使用。\n请不要在此粘贴执行任何内容，这可能会导致您的账户受到攻击，给您带来损失!\n   ###   ###\n###   ###   ###\n   ###   ###";
+			console.log(message1);
 			console.log("%cSTEVEN LI","color:red;font-size:40px;");
 		</script>
 		
