@@ -9,7 +9,7 @@ window.onload=function(){
         height:160,
         weight:75
     };
-    xiaoming.mother='Angelar';
+    xiaoming.mother='Angelar123';
     delete xiaoming.age; //删除对象中的age属性
     //console.log('age' in xiaoming);  //检测是否拥有某一属性
     //console.log('toString' in xiaoming);  //检测是否拥有某一属性
@@ -188,12 +188,16 @@ window.onload=function(){
     // var s = new Set(['A', 'B', 'C']);
     // s.forEach(function (element, sameElement, set) {
     //     console.log(element);
+    //     console.log(sameElement);
+    //     console.log(set)
     // });
 
-    // var m = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
-    // m.forEach(function (value, key, map) {
-    //     console.log(value);
-    // });
+    var m = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
+    m.forEach(function (value, key, map) {
+        console.log(value);
+        console.log(key);
+        console.log(map)
+    });
 
 }
 
