@@ -9,7 +9,7 @@ window.onload=function(){
         height:160,
         weight:75
     };
-    xiaoming.mother='Angelar123';
+    xiaoming.mother='Angelar';
     delete xiaoming.age; //删除对象中的age属性
     //console.log('age' in xiaoming);  //检测是否拥有某一属性
     //console.log('toString' in xiaoming);  //检测是否拥有某一属性
