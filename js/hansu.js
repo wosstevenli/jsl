@@ -247,3 +247,111 @@
 // })
 // console.log(r);
 
+//排序
+// var arr=['Google','Apple','Microsoft'];
+// console.log(arr.sort());
+
+// var arr=['Google','apple','Microsoft'];
+// console.log(arr.sort());
+
+// var arr=['10','20','1','2'];
+// console.log(arr.sort());
+
+// var arr=[10,20,1,2];
+// console.log(arr.sort());
+
+//正序排列
+// var arr=[10,20,1,2];
+// console.log(arr.sort(function(x,y){
+//     if(x<y){
+//         return -1;
+//     }
+//     if(x>y){
+//         return 1;
+//     }
+//     return 0;
+// }));
+
+//逆序排列
+// var arr=[10,20,1,2];
+// console.log(arr.sort(function(x,y){
+//     if(x<y){
+//         return 1;
+//     }
+//     if(x>y){
+//         return -1;
+//     }
+//     return 0;
+// }));
+
+//忽略大小写排序
+// var arr=['Google','apple','Microsoft'];
+// console.log(arr.sort(function(a1,a2){
+//     y1=a1.toUpperCase();
+//     y2=a2.toUpperCase();
+//     if(y1<y2){
+//         return -1;
+//     }
+//     if(y1>y2){
+//         return 1;
+//     }
+//     return 0;
+// }));
+
+// var arr=['Google','apple','Microsoft'];
+// console.log(arr.sort(function(a1,a2){
+//     y1=a1.toLowerCase();
+//     y2=a2.toLowerCase();
+//     if(y1<y2){
+//         return -1;
+//     }
+//     if(y1>y2){
+//         return 1;
+//     }
+//     return 0;
+// }));
+
+//闭包
+// function sum(arr){
+//     return arr.reduce(function(x,y){
+//         return x+y;
+//     });
+// }
+
+// console.log(sum([1,2,3,4,5]));
+
+// function sum(arr){
+//     var sums=function(){
+//     return arr.reduce(function(x,y){
+//         return x+y;
+//     });}
+//     return sums;
+// }
+
+// console.log(sum([1,2,3,4,5]));
+
+
+// function count() {
+//     var arr = [];
+//     for (var i=1; i<=3; i++) {
+//         arr.push(function () {  //生成数组f1()/f2()/f3()三个函数返回的值为1/4/9
+//             return i * i;
+//         });
+//     }
+//     return arr;
+// }
+
+// var results = count();
+// var f1 = results[0];
+// var f2 = results[1];
+// var f3 = results[2];
+
+//箭头函数
+// x=>x*x;
+// console.log();
+
+function foo(x){
+    return x+x;
+}
+var r=foo(1);
+console.log(r);
