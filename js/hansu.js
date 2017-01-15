@@ -87,3 +87,25 @@
 
 // fooo(1,2,3,4,5,6,7,8,9);
 
+// function foooo(){
+//     var x=1;
+//     x+=1;
+//     console.log(x);
+// }
+
+// x+=2;
+// console.log(x);
+
+// foooo(2);
+
+// function foo(){
+//     var x='Hello,'+y;
+//     alert(x);
+//     var y='STEVEN';
+// }
+
+// foo();
+//var x = 'Hello, ' + y;并不报错，原因是变量y在稍后申明了
+//但是alert显示Hello, undefined，说明变量y的值为undefined
+//这正是因为JavaScript引擎自动提升了变量y的声明，但不会提升变量y的赋值。
+
