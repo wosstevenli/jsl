@@ -109,3 +109,141 @@
 //但是alert显示Hello, undefined，说明变量y的值为undefined
 //这正是因为JavaScript引擎自动提升了变量y的声明，但不会提升变量y的赋值。
 
+// function foo(){
+//     var sum=0;
+//     for(let i=0;i<=100;i++){  //ES6中新增let
+//         sum+=i;
+//         console.log(sum);
+//     }
+// }
+
+// foo();
+
+// function foo(){
+//     var sum=0;
+//     var i=0;
+//     for(i=0;i<=100;i++){ //for无法调用i
+//         sum+=i;
+//     }
+// }
+
+// foo();
+
+// function foo(){
+//     for( var i=0;i<=100;i++){
+//     }
+//     i+=100;
+// }
+
+// foo();
+
+/////////////////////////////////方法
+// var xiaoming={
+//     name:'STEVEN',
+//     birth:1987,
+//     age:function(){
+//         var y=new Date().getFullYear();
+//         return y-this.birth;
+//     }
+// };
+// console.log(xiaoming.age);//显示的是xiaomi.age是什么，是一个function
+// console.log(xiaoming.age());//调用xiaoming.age()这个方法执行的结果
+
+//拆开写的方法
+// function getage(){
+//     var y=new Date().getFullYear();
+//     return y-this.birth;
+// }
+
+// var xiaoming={
+//     name:'steven',
+//     birth:'1990',
+//     age:getage
+// };
+
+// console.log(xiaoming.age());
+// console.log(getage());
+
+// function getage(){
+//     var y=new Date().getFullYear();
+//     return y-this.birth;
+// }
+
+// var xiaoming={
+//     name:'steven',
+//     birth:'1990',
+//     age:getage
+// };
+
+// console.log(xiaoming.age());
+// console.log(getage.apply(xiaoming,[]));
+
+///////////////////////////高阶函数
+//编写高阶函数，就是让函数的参数能够接收别的函数
+// function add(x,y,f){
+//     return f(x)+f(y);
+// }
+
+// console.log(add(-5,6,Math.abs));
+
+// function pingfang(x){
+//     return x*x;
+// }
+// var arr=[1,2,3,4,5,6];
+// // console.log(arr.map(pingfang));
+// // console.log(arr.map(pingfang));
+// console.log(pingfang);
+// console.log(pingfang());
+
+// var arr=[1,2,3,4,5,6];
+// console.log(arr.map(String));
+
+//求和
+// var arr=[1,2,3,4,5];
+// console.log(arr.reduce(function(x,y){
+//     return x+y;
+// }));
+
+//求乘积
+// var arr=[1,2,3,4,5];
+// console.log(arr.reduce(function(x,y){
+//     return x*y;
+// }));
+
+// var arr=[1,2,3,4,5];
+// console.log(arr.reduce(function(x,y){
+//     return x*10+y;
+// }))
+
+//filter
+// var arr=[1,2,3,4,5,6,7,8,9];
+// var r=arr.filter(function(x){
+//     return x%2==0; //x/2取余为偶数时成立
+//     return x%2!==0; //x/2取余为基数时成立
+// });
+// console.log(r);
+
+//有问题
+// var arr=['A','B','','c',null,undefined,NaN,' ','d'];
+// var r=arr.filter(function(s){
+//     //console.log(s);
+//     return s && s.trim();
+//     });
+
+//console.log(arr);
+
+// var arr=['A','B','','c',null,undefined,NaN,' ','d'];
+// var r=arr.filter(function(a,b,c){
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+//     //return true;
+// })
+
+//去除重复元素
+// var arr=['A','B','','A',null,undefined,NaN,' ','d'];
+// var r=arr.filter(function(a,b,c){
+//     return c.indexOf(a)===b;
+// })
+// console.log(r);
+
