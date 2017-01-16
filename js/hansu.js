@@ -350,8 +350,10 @@
 // x=>x*x;
 // console.log();
 
-function foo(x){
-    return x+x;
-}
-var r=foo(1);
-console.log(r);
+// function foo(x){
+//     return x+x;
+// }
+// var r=foo(1);
+// console.log(r);
+
+//做人呢，最重要的是吃面！你饿不饿，那你还不自己去煮面！
