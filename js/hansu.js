@@ -357,3 +357,42 @@
 // console.log(r);
 
 //做人呢，最重要的是吃面！你饿不饿，那你还不自己去煮面！
+
+//Date
+// var now = new Date();
+// console.log(now+"输出当前详情时间");
+// console.log(now.getDate()+"输出日期");
+// console.log(now.getDay()+"输出当前星期");
+// console.log(now.getFullYear()+"输出当前年份");
+// console.log(now.getHours()+"输出当前小时");
+// console.log(now.getMilliseconds()+"输出当前毫秒");
+// console.log(now.getMinutes()+"输出当前分钟");
+// console.log(now.getMonth()+1+"输出当前月份从0开始，显示当前月份要+1");
+// console.log(now.getSeconds()+"输出当前秒钟");
+// console.log(now.getTime()+"以number形式表示的时间戳");
+// console.log(now.getTimezoneOffset()+"");
+// console.log(now.getUTCDate()+"");
+// console.log(now.getUTCDay()+"");
+// console.log(now.getUTCFullYear()+"");
+//console.log(now.getFullYear()+'/'+(now.getMonth()+1)+'/'+now.getDate());
+
+// var setday=new Date(2017,1,14,14,59,59,123);
+// console.log(setday); //设定的日期1月会被+1翻译为2月
+
+// var setday=new Date(1435146562875);
+// console.log(setday);
+// console.log(setday.toLocaleString());//显示本地时间
+// console.log(setday.toUTCString());//显示UTC时间
+
+// if(Date.now){
+//     alert(Date.now());
+// }else{
+//     alert(new Date().getTime());
+// }
+
+// var today= new Date();
+// if(today.getMonth()==1&&today.getDate()==14){
+//     console.log("情人节快乐！");
+// }
+
+//正则表达式
