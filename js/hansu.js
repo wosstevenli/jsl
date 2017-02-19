@@ -546,3 +546,80 @@
 //     return value;
 // }));
 
+//面向对象编程
+// var student ={
+//     name:'xingming',
+//     height:1.7,
+//     yunxing:function(){
+//         console.log(this.name+'正在运行！');
+//     }
+// };
+
+// var xiaomi={
+//     name:'小米'
+// };
+
+// xiaomi.__proto__=student;
+// console.log(xiaomi.name);
+// console.log(xiaomi.height);
+// console.log(xiaomi.yunxing);
+//console.log(xiaomi.yunxing());
+//console.log(xiaomi.name+xiaomi.height+xiaomi.yunxing);
+
+// var lei={
+//     name:'classname',
+//     height:1.7,
+//     run:function(){
+//         console.log(this.name +this.height+ '就是他！');
+//     }
+// };
+
+// console.log(lei);
+//console.log(lei.run());//也不能这样用
+// lei.run();
+// var mi ={
+//     name:'虎哥'
+// };
+
+// mi.__proto__=lei;
+
+// console.log(mi.name);
+// console.log(mi.run);
+// console.log(mi.run());//运行run函数只直接使用mi.run();
+// console.log(mi.height);
+// mi.run();
+
+//JavaScript的原型链和Java的Class区别就在，它没有“Class”的概念，所有对象都是实例，所谓继承关系不过是把一个对象的原型指向另一个对象而已。
+
+// var bird={
+//     fly:function(){
+//         console.log(this.name+'让你飞！');
+//     }
+// };
+
+// var mi={
+//     name:'小米'
+// };
+
+// mi.__proto__=bird;
+// console.log(mi.name);
+// mi.fly();
+
+//使用这种方法创建对象
+// var lei={
+//     name:'classname',
+//     height:1.7,
+//     run:function(){
+//         console.log(this.name +this.height+ '就是他！');
+//     }
+// };
+
+// function creatlei(name){
+//     var s=Object.create(lei);
+//     s.name=name;
+//     return s;
+// }
+
+// var mi=creatlei('小米');
+// mi.run();
+// console.log(mi.__proto__===lei);
