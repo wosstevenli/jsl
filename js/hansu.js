@@ -623,3 +623,22 @@
 // var mi=creatlei('小米');
 // mi.run();
 // console.log(mi.__proto__===lei);
+
+//创建对象-构造函数
+// function stu(name){
+//     this.name=name;
+//     this.hello=function(){
+//         console.log('Hello!'+this.name+'!!!');
+//     }
+// }
+
+// function stu(hhkk){//创建函数的参数可以任意设定名称
+//     this.name=hhkk;
+//     this.hello=function(){
+//         console.log('Hello!'+this.name+'!!!');
+//     }
+// }
+
+// var mi=new stu('xxxx');
+// console.log(mi.name);
+
