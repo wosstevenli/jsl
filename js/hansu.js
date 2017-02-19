@@ -396,3 +396,153 @@
 // }
 
 //正则表达式
+//20170219
+// var re01=/[a-zA-Z\_\$][0-9a-zA-Z\_\$]{0, 19}/;
+// var test='WHrzxf501-';
+// console.log(re01.test);
+// console.log(re01);
+
+// var re01=/ABC\-001/;
+// var re02=new RegExp('ABC\-001');//这种表达方式中/需要转义
+// var re03=new RegExp('ABC\\-001');//其中\需要加\来进行转义
+// console.log(re01);
+// console.log(re02);
+// console.log(re03);
+
+// var re=/[a-zA-Z\_\$][0-9a-zA-Z\_\$]{0, 19}/;
+// var re=/[a-zA-Z\_\$][0-9a-zA-Z\_\$]/;
+// console.log(re.test('WHrzxf501-'));
+// console.log(re.test('WHrzxf501_'));//RegExp对象的test()方法用于测试给定的字符串是否符合条件。
+
+// console.log('a b    c'.split(''));
+// console.log('a b    c'.split(/\s+/));//忽略空格数目
+//console.log('a b    c'.split(/\s+/).length);
+// console.log('a,b, c  d'.split(/\s+/));
+// console.log('a,b, c  d'.split(/\s+/).length);
+// console.log('a,b, c  d'.split(/[\s\,+]+/));
+// console.log('a,b, c  d'.split(/[\s\,+]+/).length);
+// console.log('a,b;; c  d'.split(/[\s\,\;+]+/));
+// console.log('a,b;; c  d'.split(/[\s\,\;+]+/).length);
+
+//var re=/^(\d{3})-(\d{5,8})$/;
+// console.log(re.exec('027-61600766'));
+//console.log(re.exec('027-12345'));
+// console.log(re.exec('027-123'));
+// console.log(re.exec('027-1234a'));
+// console.log(re.exec('027-1234-'));
+// console.log(re.exec('027-12345-'));
+
+// var re = /^(0[0-9]|1[0-9]|2[0-3]|[0-9])\:(0[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|[0-9])\:(0[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|[0-9])$/;
+// console.log(re.exec('7:26:36'));
+
+// var re =/^(\d+)(0*)$/;
+//var re =/^(\d+?)(0*)$/; //?采用非贪婪匹配
+//console.log(re.exec('102300'));
+//console.log(re.exec('102300'));
+
+//邮箱验证
+// var re=/^([0-9a-zA-Z]+)([0-9a-zA-Z.\_]+)@([0-9a-zA-Z\_]+).([0-9a-zA-Z])$/;
+// console.log(re.test('wosstevenli@gmail.com'));
+
+//Json学习开始
+// var xiaoqi={
+//     name:'小七',
+//     age:28,
+//     sex:'girl',
+//     height:1.58,
+//     job:['sales','teacher','doctor'],
+//     'middle-school':'liji',
+// }
+
+// console.log(JSON.stringify(xiaoqi));
+
+// xiaoqi={
+//     name:'小七',
+//     age:28,
+//     sex:'girl',
+//     height:1.58,
+//     job:['sales','teacher','doctor'],
+//     'middle-school':'liji',
+// }
+
+// console.log(JSON.stringify(xiaoqi,null,' ')); //按缩进输出
+
+// xiaoqi={
+//     name:'小七',
+//     age:28,
+//     sex:'girl',
+//     height:1.58,
+//     job:['sales','teacher','doctor'],
+//     'middle-school':'liji',
+// }
+
+// console.log(JSON.stringify(xiaoqi,['name','job'],' ')); //只输出指定的属性
+
+// xiaoqi={
+//     name:'小七',
+//     age:28,
+//     sex:'girl',
+//     height:1.58,
+//     job:['sales','teacher','doctor'],
+//     'middle-school':'liji',
+// }
+
+// function convert(key,value){
+//     if(typeof value ==='string'){
+//         return value.toUpperCase();
+//     }
+//     return value;
+// }
+
+// console.log(JSON.stringify(xiaoqi,convert,' ')); //传入函数json每个键值先被函数处理
+
+// xiaoqi={
+//     name:'小七',
+//     age:28,
+//     sex:'girl',
+//     height:1.58,
+//     job:['sales','teacher','doctor'],
+//     'middle-school':'liji',
+//     toJSON:function(){
+//         return {
+//             'WName':this.age,
+//             'WAge':this.name,
+//         };
+//     }
+// };
+
+// console.log(JSON.stringify(xiaoqi,null,' ')); //将xiaoqi重新进行序列化
+//序列化指的是将对象转化为json格式的字符串
+
+//反序列化指的是将拿到的json格式的字符串通过JSON.parse()变成一个javascript对象
+// console.log(JSON.parse('[1,2,3,true]'));
+// console.log(typeof('[1,2,3,true]')); //类型为字符串
+// console.log(typeof(JSON.parse('[1,2,3,true]')));//类型为对象
+
+// var xiaoqi={
+//     name:'小七',
+//     age:28,
+//     sex:'girl',
+//     height:1.58,
+//     job:['sales','teacher','doctor'],
+//     'middle-school':'liji',
+// }
+
+// //console.log(typeof(xiaoqi));//xiaoqi原本是一个对象 object
+// console.log(JSON.stringify(xiaoqi));
+// console.log(typeof(JSON.stringify(xiaoqi)));//对象经过序列化成为json格式的字符串 string
+
+// console.log(JSON.parse('{"name":"小明","age":14}'));
+// console.log(typeof('{"name":"小明","age":14}')); //string字符串
+// //JSON的字符串规定必须用双引号""，Object的键也必须用双引号"" 这是JSON格式的字符串{"name":"小明","age":14}，这是普通javascript格式的Object { name: "小明", age: 14 }
+// console.log(typeof(JSON.parse('{"name":"小明","age":14}')));//对象
+
+//console.log(JSON.parse({"name":"小明","age":14}));//无法使用
+
+// console.log(JSON.parse('{"name":"小七","age":14}',function(key,value){
+//     if(key === 'name'){
+//         return value+'同学';
+//     }
+//     return value;
+// }));
+
