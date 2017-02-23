@@ -835,3 +835,52 @@
 // } else {
 //     alert('节点测试失败!');
 // }
+
+//插入DOM
+//原有节点插入新的位置
+// var js=document.getElementById('js'),
+//     list=document.getElementById('list');
+// list.appendChild(js);
+// console.log(list);
+
+//创建新节点插入
+// var list=document.getElementById('list'),
+//     php=document.createElement('p');
+// php.id='php';
+// php.innerText='PHP';
+// list.appendChild(php);
+
+// var d=document.createElement('style');
+// d.setAttribute('type','text/css');
+// d.innerHTML='p{color:#3079ed}';
+// document.getElementsByTagName('head')[0].appendChild(d);
+// console.log(document.getElementsByTagName('head')[0]);//动态创建了一个<style>节点，然后把它添加到<head>节点的末尾
+
+// var d=document.createElement('style');
+// d.setAttribute('type','text/css')
+// d.innerHTML='p{margin-left:100px}';
+// document.getElementById('java').appendChild(d);
+
+// var list=document.getElementById('list'),
+//     py=document.getElementById('python'),
+//     php=document.createElement('p');
+//     php.id='php';
+//     php.innerText='PHP';
+//     list.insertBefore(php,py);
+
+//循环子节点
+// var i,c,list=document.getElementById('list');
+// for(i=0;i<list.children.length;i++){
+//     c=list.children[i];
+// }
+// console.log(c);
+
+//删除节点，要删除一个节点，首先要获得该节点本身以及它的父节点，然后，调用父节点的removeChild把自己删掉：
+// var java=document.getElementById('java');
+// var parent=java.parentElement;
+// var remove=parent.removeChild(java);
+// console.log(java);
+// console.log(remove);
+// console.log(java===remove);
+
+//操作表单
