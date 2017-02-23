@@ -957,4 +957,123 @@
 
 // AJAX  在现代浏览器上写AJAX主要依靠XMLHttpRequest对象
 
+//啥子是promise承诺 异步操作，异步操作会在将来的某个时间点触发一个函数调用。
+// function callback(){
+//     console.log('Done');
+// } //定义函数callback()
+// console.log('before setTimeout()'); //打印字符串'before setTimeout()'
+// setTimeout(callback,1000); //执行函数setTimeout()参数为callback()函数和1000毫秒
+// console.log('after setTimeout()');//打印字符串'after setTimeout()'
 
+// new Promise(function(){});
+// console.log('支持promise');
+
+/*function test(resolve, reject) {
+    var timeOut = Math.random() * 2;
+    console.log('set timeout to: ' + timeOut + ' seconds.');
+    setTimeout(function () {
+        if (timeOut < 1) {
+            console.log('call resolve()...');
+            resolve('200 OK');
+        }
+        else {
+            console.log('call reject()...');
+            reject('timeout in ' + timeOut + ' seconds.');
+        }
+    }, timeOut * 1000);
+}*/
+
+/*var p1 = new Promise(test);
+var p2 = p1.then(function (result) {
+    console.log('成功：' + result);
+});
+var p3 = p2.catch(function (reason) {
+    console.log('失败：' + reason);
+});*/
+//简写
+/*new Promise(test).then(function(result){
+    console.log('成功:'+result);
+}).catch(function(reason){
+    console.log('失败:'+reason);
+});*/
+
+// var canvas=document.getElementById('test-canvas');
+// if(canvas.getContext){
+//     console.log('你的浏览器支持canvas');
+// }else{
+//     console.log('你的浏览器不支持convas');
+// }
+
+// var canvas = document.getElementById('test-canvas'),
+//     ctx = canvas.getContext('2d');
+//     ctx.clearRect(0, 0, 200, 200); // 擦除(0,0)位置大小为200x200的矩形，擦除的意思是把该区域变为透明
+//     ctx.fillStyle = '#dddddd'; // 设置颜色
+//     ctx.fillRect(10, 10, 130, 130); // 把(10,10)位置大小为130x130的矩形涂色
+//     // 利用Path绘制复杂路径:
+//     var path=new Path2D();
+//     path.arc(75, 75, 50, 0, Math.PI*2, true);
+//     path.moveTo(110,75);
+//     path.arc(75, 75, 35, 0, Math.PI, false);
+//     path.moveTo(65, 65);
+//     path.arc(60, 65, 5, 0, Math.PI*2, true);
+//     path.moveTo(95, 65);
+//     path.arc(90, 65, 5, 0, Math.PI*2, true);
+//     ctx.strokeStyle = '#0000ff';
+//     ctx.stroke(path);
+
+// var canvas = document.getElementById('test-canvas'),
+//     ctx = canvas.getContext('2d');
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+//     ctx.shadowOffsetX = 2;
+//     ctx.shadowOffsetY = 2;
+//     ctx.shadowBlur = 2;
+//     ctx.shadowColor = '#666666';
+//     ctx.font = '24px Arial';
+//     ctx.fillStyle = '#333333';
+//     ctx.fillText('带阴影的文字', 20, 40);
+
+//jQuery
+// console.log('jQuery版本:'+$.fn.jquery);
+// console.log(typeof(window.jQuery));
+// console.log(window.$);
+// console.log(window.jQuery===window.$);
+
+//console.log($('#div01'));
+// var div = $('#div01');
+// var divDom = div.get(0);
+// var another = $(divDom);
+// console.log(div);
+// console.log(divDom);
+// console.log(another);
+
+//通常很多节点有多个class，我们可以查找同时包含red和green的节点：
+//var a = $('.red.green'); // 注意没有空格！
+// var email = $('[name=email]'); // 找出<??? name="email">
+// var passwordInput = $('[type=password]'); // 找出<??? type="password">
+// var a = $('[items="A B"]'); // 找出<??? items="A B">
+// 当属性的值包含空格等特殊字符时，需要用双引号括起来
+
+// 按属性查找还可以使用前缀查找或者后缀查找：
+// var icons = $('[name^=icon]'); // 找出所有name属性值以icon开头的DOM
+// // 例如: name="icon-1", name="icon-2"
+// var names = $('[name$=with]'); // 找出所有name属性值以with结尾的DOM
+// // 例如: name="startswith", name="endswith"
+// 这个方法尤其适合通过class属性查找，且不受class包含多个名称的影响：
+// 组合查找
+//组合查找就是把上述简单选择器组合起来使用。如果我们查找$('[name=email]')，很可能把表单外的<div name="email">也找出来，但我们只希望查找<input>，就可以这么写：
+//var emailInput = $('input[name=email]'); // 不会找出<div name="email">
+//同样的，根据tag和class来组合查找也很常见：
+//var tr = $('tr.red'); // 找出<tr class="red ...">...</tr>
+
+// 多项选择器
+//多项选择器就是把多个选择器用,组合起来一块选：
+//$('p,div'); // 把<p>和<div>都选出来
+//$('p.red,p.green'); // 把<p class="red">和<p class="green">都选出来
+
+// var selected = null;
+// selected = $('#para-1');
+// selected = $('.color-red.color-green');
+// selected = $('.color-red');
+// selected = $('[class^="color-"]');
+// selected = $('input[name=name]');
+// selected = $('input[name=name],input[name=email]');
