@@ -642,3 +642,196 @@
 // var mi=new stu('xxxx');
 // console.log(mi.name);
 
+//继承没弄懂
+// function student(props){
+//     this.name=props.name ||'Unnamed';
+// }
+
+// student.prototype.hello=function(){
+//     alert('Hello,'+this.name+'!');
+// }
+
+//EC6 class
+// function student(name){
+//     this.name=name;
+//     console.log(this.name);
+// }
+
+// student.prototype.hello=function(){
+//     console.log('Hello'+this.name+'!');
+// }
+
+// student('STEVEN');
+
+// class student{
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age;
+//     }
+//     hello(){
+//         console.log('Hello,'+this.name+'!'+this.age);
+//     }
+// }
+
+// var xiaomi=new student('MI',28);
+// xiaomi.hello();
+
+// class student{
+//     constructor(name,age){
+//         this.name=name;
+//         this.age=age;
+//     }
+//     hello(){
+//         console.log('Hello,'+this.name+'!'+this.age);
+//     }
+// }
+
+// var xiaomi=new student('MI',28);
+// xiaomi.hello();
+
+// class student{
+//     constructor(name){
+//         this.name=name;
+//     }
+//     hello(){
+//         console.log('Hello,'+this.name+'!');
+//     }
+// }
+
+// class newstudent extends student{
+//     constructor(name,grade){
+//         super(name);
+//         this.grade=grade;
+//     }
+
+//     mygrade(){
+//         console.log('I AM GRADE'+this.grade);
+//     }
+// }
+
+// var xiaomi=new newstudent('MI',5);
+// xiaomi.mygrade();
+
+//浏览器讲的是浏览器对ES的支持
+
+//浏览器对象
+// alert('浏览器窗口大小为：'+window.innerWidth+'*'+window.innerHeight);
+// console.log('浏览器窗口大小为：'+window.innerWidth+'*'+window.innerHeight);
+
+// alert('浏览器窗口整体大小为：'+window.outerWidth+'*'+window.outerWidth);
+// console.log('浏览器整体大小为：'+window.outerWidth+'*'+window.outerHeight);
+
+// console.log('appname='+navigator.appName);
+// console.log('appversion='+navigator.appVersion);
+// console.log('applanguage='+navigator.language);
+// console.log('appplatform='+navigator.platform);
+// console.log('appuseragent='+navigator.userAgent);
+
+//短路运算符||计算：
+// var width = window.innerWidth || document.body.clientWidth;
+// console.log(width);
+// console.log(window.innerWidth+'/'+window.outerWidth+'/'+screen.width);
+// console.log(screen.colorDepth);
+
+// console.log(location.protocol+ '\n' +location.host+ '\n' +location.port+ '\n' +location.pathname+ '\n' +location.search+ '\n' +location.hash);
+
+//LOCATION
+//重新加载
+// if(confirm('重新加载当前页'+location.href+'?')){
+//     location.reload();
+// }
+// else{
+//     location.assign('https://www.baidu.com/');
+// }
+
+//document
+// document.title='无法可修饰的一对手';
+// console.log(document.title);
+
+// var menu=document.getElementById('drinkmenu');
+// var drink=document.getElementsByTagName('dt');
+// var i,s;
+     // console.log(menu);
+     // console.log(menu.tagName);
+     // console.log(drink);
+// s='提供的饮品有：';
+// for(i=0;i<drink.length;i++){
+//     s=s+drink[i].innerHTML+',';
+// };
+// console.log(s);
+
+//console.log(document.cookie);
+
+//history.back();
+//对于现代Web页面来说，由于大量使用AJAX和页面交互，简单粗暴地调用history.back()可能会让用户感到非常愤怒。
+//任何情况，你都不应该使用history这个对象了。
+
+//console.log(document.getElementById('drinkmenu'));
+//console.log(document.getElementById('drinkmenu').tagName);
+//console.log(document.getElementById('drinkmenu').getElementsByTagName('dt'));
+//console.log(document.getElementById('drinkmenu').getElementsByClassName('water'));
+//console.log(drinkmenu.children); //获取drinkmenu节点下的所有节点
+// console.log(drinkmenu.firstElementChild);
+// console.log(drinkmenu.lastElementChild);
+
+// console.log(document.querySelector('#drinkmenu'));
+// var DIV=document.querySelector('#drinkmenu');
+// console.log(document.querySelectorAll('dt'));
+// console.log(DIV.querySelectorAll('dd'));
+
+// var js =document.getElementById('test-p');// 选择<p>JavaScript</p>:
+
+// var arr =document.querySelectorAll('.c-red.c-green >p');// 选择<p>Python</p>,<p>Ruby</p>,<p>Swift</p>:
+
+// var haskell =document.querySelector(".c-green + .c-green :last-child");// 选择<p>Haskell</p>:
+
+// if (!js || js.innerText !== 'JavaScript') {
+//     alert('选择JavaScript失败!');
+// } else if (!arr || arr.length !== 3 || !arr[0] || !arr[1] || !arr[2] || arr[0].innerText !== 'Python' || arr[1].innerText !== 'Ruby' || arr[2].innerText !== 'Swift') {
+//     alert('选择Python,Ruby,Swift失败!');
+// } else if (!haskell || haskell.innerText !== 'Haskell') {
+//     alert('选择Haskell失败!');
+// } else {
+//     alert('测试通过!');
+// }
+
+// console.log(js+arr+haskell);
+
+// console.log(document.getElementById('test-p').innerHTML='HAOHAOXUEXI');
+//console.log(document.getElementById('test-p').innerHTML='<span style="color:red;margin-left:200px">HAOHAOXUEXI</span>');
+// console.log(document.getElementById('test-p').innerText='GOODGOOGLE');
+// console.log(document.getElementById('test-p').innerText='<script>alert("Hi")</script>');
+// console.log(document.getElementById('test-p').innerHTML='<script>alert("Hi")</script>');
+// var p=document.getElementById('test-p').innerHTML='<script>alert("Hi")</script>';
+
+// var cstyle =document.getElementById('test-p');
+// cstyle.style.fontSize='40px';
+// cstyle.style.color='#3079ed';
+// cstyle.style.marginLeft='200px';
+
+// 获取<p>javascript</p>节点:
+// var js =document.getElementById('test-js');
+
+// // 修改文本为JavaScript:
+// // TODO:
+// js.innerHTML='JavaScript';
+
+// // 修改CSS为: color: #ff0000, font-weight: bold
+// // TODO:
+// js.style.color='#ff0000';
+// js.style.fontWeight='bold';
+
+// // 测试:
+// if (js && js.parentNode && js.parentNode.id === 'test-div02' && js.id === 'test-js') {
+//     if (js.innerText === 'JavaScript') {
+//         if (js.style && js.style.fontWeight === 'bold' && (js.style.color === 'red' || js.style.color === '#ff0000' || js.style.color === '#f00' || js.style.color === 'rgb(255, 0, 0)')) {
+//             alert('测试通过!');
+//         } else {
+//             alert('CSS样式测试失败!');
+//         }
+//     } else {
+//         alert('文本测试失败!');
+//     }
+// } else {
+//     alert('节点测试失败!');
+// }
