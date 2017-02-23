@@ -884,3 +884,77 @@
 // console.log(java===remove);
 
 //操作表单
+// var input=document.getElementById('email');
+// console.log(input);
+// console.log(input.value);
+
+// var mon=document.getElementById('monday');
+// var tue=document.getElementById('tuesday');
+// console.log(mon);
+// console.log(tue);
+// console.log(mon.value);
+// console.log(tue.value);
+// console.log(mon.checked);
+// console.log(tue.checked);
+
+// var input=document.getElementById('email');
+// input.value='LADYGAGA';
+// console.log(input.value='JUSTINBIBER');
+
+// console.log(typeof(document.getElementById('newtype').value));
+
+// console.log(typeof(document.getElementById('newtype').value));
+// console.log(document.getElementById('newtype').value);
+
+// console.log(typeof(document.getElementById('newtype01').value));
+// console.log(document.getElementById('newtype01').value);
+
+// console.log(typeof(document.getElementById('newtype02').value));
+// console.log(document.getElementById('newtype02').value);
+
+// function doSubmitForm(){
+//     var form=document.getElementById('test-form');
+//     form.submit();
+// };
+
+// function checkForm(){
+//     var form=document.getElementById('test-form2');
+//     return true; //注意要return true来告诉浏览器继续提交，如果return false，浏览器将不会继续提交form，这种情况通常对应用户输入有误，提示用户错误信息后终止提交form。
+// }
+
+// function checkForm(){
+//     var pwd=document.getElementById('password');
+//     pwd.value =toMD5(pwd.value);
+//     return true;
+// }
+
+// function checkRegisterForm() {
+//     // var name = /^[0-9a-zA-Z]{3,10}$/;
+//     var name = /\w{3,8}/;
+//     var pwd = /\w{6,20}/;
+//     var username = document.getElementById('username').value;
+//     var password = document.getElementById('password').value;
+//     var password2 = document.getElementById('password-2').value;
+
+// if(name.test(username) && pwd.test(password) && password === password2){
+//     return true;
+// }
+//     return false;
+// };
+// (function () {
+//     window.testFormHandler = checkRegisterForm;
+//     var form = document.getElementById('test-register');
+//     if (form.dispatchEvent) {
+//         var event = new Event('submit', {
+//             bubbles: true,
+//             cancelable: true
+//           });
+//         form.dispatchEvent(event);
+//     } else {
+//         form.fireEvent('onsubmit');
+//     }
+// })();
+
+// AJAX  在现代浏览器上写AJAX主要依靠XMLHttpRequest对象
+
+

@@ -81,6 +81,60 @@
 		<li>CSS</li>
 		<li>DirectX</li>
 		</ul>
+
+		<!--表单操作-->
+		<div style="width: 100%;height: 1px;background-color: #3079ed"></div>
+		<input type="text" id="email">
+		<label><input type="radio" name="weekday" id="monday" value="1"> Monday</label>
+		<label><input type="radio" name="weekday" id="tuesday" value="2"> Tuesday</label>
+		<input type="date" value="2017-02-23" id="newtype">
+		<input type="datetime-local" value="2016-05-26 02:25:36" id="newtype01">
+		<input type="color" value="#3079ed" id="newtype02">
+
+		<!--submit form-->
+		<div style="width: 100%;height: 1px;background-color: #3079ed"></div>
+		<form id="test-form">
+			<input type="text" name="test">
+			<button type="button" onclick="doSubmitForm()">Submit</button>
+		</form>
+		<!--onsubmit-->
+		<div style="width: 100%;height: 1px;background-color: #3079ed"></div>
+		<form id="test-form2" onsubmit="return checkForm()">
+			<input type="text" name="test">
+			<button type="submit">Submit</button>
+		</form>
+
+		<!--loginform-->		
+		<div style="width: 100%;height: 1px;background-color: #3079ed"></div>
+		<form id="login-form" method="post" onsubmit="return checkForm()">
+			<input type="text" id="username" name="username" placeholder="用户名">
+			<input type="password" id="password" name="password" placeholder="密码">
+			<button type="submit">Submit</button>
+		</form>
+
+		<!--pswhidden-->
+		<div style="width: 100%;height: 1px;background-color: #3079ed"></div>
+		<form id="login-form2" method="post" onsubmit="return checkForm()">
+			<input type="text" id="username" name="username">
+			<input type="password" id="input-password"> <!--没有name属性的<input>的数据不会被提交-->
+			<input type="hidden" id="md5-password" name="password">
+			<button type="submit">Submit</button>
+		</form>
+
+		<!--reginsted-->
+		<div style="width: 100%;height: 1px;background-color: #3079ed"></div>
+		<form id="test-register" action="#" target="_blank" onsubmit="return checkRegisterForm()">
+			<p id="test-error" style="color:red"></p>
+			<p>用户名: <input type="text" id="username" name="username"></p>
+			<p>密码: <input type="password" id="password" name="password"></p>
+			<p>重复密码: <input type="password" id="password-2"></p>
+			<p><button type="submit">提交</button> <button type="reset">重置</button></p>
+		</form>
+
+		<!--fileupload-->
+		<div style="width: 100%;height: 1px;background-color: #3079ed"></div>
+		<input type="file">
+
 	</body>
 	<script src="js/hansu.js"></script>
 </html>
