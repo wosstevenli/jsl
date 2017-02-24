@@ -1077,3 +1077,30 @@ var p3 = p2.catch(function (reason) {
 // selected = $('[class^="color-"]');
 // selected = $('input[name=name]');
 // selected = $('input[name=name],input[name=email]');
+
+//层级选择器
+//$('ancestor descendant')来选择，层级之间用空格隔开
+//console.log($('ul.lang li.lang-javascript'));
+//console.log($('form.test-form1 p input')); //类为test-form1的表单中p里面的input
+
+//$('parent>child')类似层级选择器，但是限定了层级关系必须是父子关系，就是<child>节点必须是<parent>节点的直属子节点
+
+//过滤器一般不单独使用，它通常附加在选择器上，帮助我们更精确地定位元素。观察过滤器的效果：
+// console.log($('ul.lang li'));
+// console.log($('ul.lang li:first-child'));
+// console.log($('ul.lang li:last-child'));
+// console.log($('ul.lang li:nth-child(2)'));
+// console.log($('ul.lang li:nth-child(even)'));
+// console.log($('ul.lang li:nth-child(odd)'));
+
+//var ul=$('ul.lei');
+//console.log(ul.find('.dy'));
+// console.log(ul.find('#swift'));
+// console.log(ul.find('[name=haskell]'));
+//console.log(ul.find('[kame=kaskell]')); //可以自定义属性
+
+//从当前节点向上查找
+//var swift=$('#sifit');
+//console.log(swift);
+//console.log(swift.parent());
+//console.log(swift.parent('div.kk'));
