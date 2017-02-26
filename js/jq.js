@@ -30,7 +30,7 @@
 // console.log(dx.css('color','#3079ed'));
 // console.log(dx.css('color',''));
 
-var div = $('ul li.lang');
+//var div = $('ul li.lang');
 //var div = $('#test-css');
 //console.log(div.hasClass('highlight')); // false， class是否包含highlight
 //console.log(div.addClass('highlight')); // 添加highlight这个class
