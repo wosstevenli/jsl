@@ -41,3 +41,81 @@
 //val()就统一了各种输入框的取值和赋值的问题
 
 
+// var ul=$('#test-div>ul');
+// ul.append('<li><span>GOOGLE</span></li>');
+
+// var js=$('#test-div>ul>li:first-child');
+// js.after('<li><span>GOOGLE</span></li>');
+// js.before('<li><span>GOOGLE</span></li>');
+
+// var js=$('#test-div>ul>li:last-child');
+// js.after('<li><span>GOOGLE</span></li>');
+// js.before('<li><span>GOOGLE</span></li>');
+
+// var li=$('#test-div>ul>li');
+// li.remove();
+
+var dj=$('#dbc');
+dj.dblclick(function(){
+    console.log('花木兰');
+});
+
+dj.click(function(){
+    console.log('唧唧复唧唧');
+});
+
+dj.mouseenter(function(){
+    console.log('木兰当户织');
+});
+
+dj.mouseleave(function(){
+    console.log('不闻机杼声');
+});
+
+dj.mousemove(function(){
+    console.log('惟闻女叹息');
+});
+
+dj.hover(function(){
+    console.log('这个要怎么显示呢！！！');
+});
+
+var jianpan=$('#jianpan')
+jianpan.keydown(function(){
+    console.log('知道不知道，鼠标点击下来了！');
+});
+jianpan.click(function(){
+    console.log('快点来写点东西吧');
+});
+jianpan.keyup(function(){
+    console.log('写完了吗？？？');
+});
+jianpan.keypress(function(){
+    console.log('按一次键后，那多按几次呢？？？');
+});
+jianpan.focus(function(){
+    console.log('获取焦点！');
+});
+// dj.focus(function(){ //貌似只有输入框之类的能获取焦点
+//     console.log('获取焦点！');
+// });
+
+jianpan.blur(function(){
+    console.log('丢了！！！！');
+});
+
+jianpan.change(function(){
+    console.log('Exchange!');
+});
+
+/*function djj(){
+    alert('FFFFFFFFFK');
+}
+
+jianpan.click(djj);
+setTimeout(function(){
+    jianpan.off('click',djj);
+},3000);*/
+
+console.log(jianpan);
+
