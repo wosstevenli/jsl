@@ -55,7 +55,7 @@
 // var li=$('#test-div>ul>li');
 // li.remove();
 
-var dj=$('#dbc');
+/*var dj=$('#dbc');
 dj.dblclick(function(){
     console.log('花木兰');
 });
@@ -95,18 +95,19 @@ jianpan.keypress(function(){
 });
 jianpan.focus(function(){
     console.log('获取焦点！');
-});
+});*/
+
 // dj.focus(function(){ //貌似只有输入框之类的能获取焦点
 //     console.log('获取焦点！');
 // });
 
-jianpan.blur(function(){
+/*jianpan.blur(function(){
     console.log('丢了！！！！');
 });
 
 jianpan.change(function(){
     console.log('Exchange!');
-});
+});*/
 
 /*function djj(){
     alert('FFFFFFFFFK');
@@ -117,5 +118,140 @@ setTimeout(function(){
     jianpan.off('click',djj);
 },3000);*/
 
-console.log(jianpan);
+// console.log(jianpan);
+
+// var dh=$('#test-div');
+// dh.hide(3000);
+// dh.show(5000);
+
+/*function dh(){
+    var dh=$('#test-div');
+    dh.toggle(3000);
+}*/
+
+/*function animatetest(){
+    var dh=$('#animate');
+    dh.slideToggle(3000);
+}*/
+
+//淡入淡出
+/*function animatetest(){
+    var dh=$('#animate');
+    dh.fadeToggle(3000);
+}*/
+
+//自定义动画animate
+/*function animatetest(){
+    var dh=$('#animate');
+    dh.animate({
+        opacity:0.25,
+        width:'500px',
+        height:'400px'
+    },3000);
+}*/
+
+/*function animatetest(){
+    var dh=$('#animate');
+    dh.animate({
+        opacity:0.25,
+        width:'500px',
+        height:'400px'
+    },3000,function(){
+        console.log('动画已经结束！');
+    });
+}*/
+
+/*function animatetest(){
+    var dh=$('#animate');
+    dh.slideDown(2000)
+    .delay(1000)
+    .animate({
+        width: '256px',
+       height: '256px'
+   }, 2000)
+   .delay(5000)
+   .animate({
+       width: '500px',
+       height: '600px'
+   },2000);
+}*/
+
+//AJAX
+/*var jqajax=$.ajax('/api/categories',{
+    dataType:'json'
+});*/
+
+/*var jqajax=$.get('/api/categories',{
+    name:'STEVEN',
+    check:1
+});*/
+//第二个参数如果是object，jQuery自动把它变成query string然后加到URL后面，实际的URL是：
+//请求网址：http://127.0.0.1/api/categories?name=STEVEN&check=1 请求方式：get
+
+/*var jqajax=$.post('/api/categories',{
+    name:'STEVEN',
+    check:2
+});*/
+
+/*var jqajax=$.getJSON('/api/categories',{
+    name:'STEVEN',
+    check:1
+}).done(function(data){
+
+});*/
+
+//拓展jQuery
+
+/*$.fn.highlight1=function(){
+    this.css('backgroundColor','#fffceb').css('color','#d85030');
+    return this;
+}
+
+$('#test-highlight1 span').highlight1();*/
+
+/*$.fn.highlight2 = function (options) {
+    // 要考虑到各种情况:
+    // options为undefined
+    // options只有部分key
+    var bgcolor = options && options.backgroundColor || '#fffceb';
+    var color = options && options.color || '#d85030';
+    this.css('backgroundColor', bgcolor).css('color', color);
+    return this;
+}
+
+$('#test-highlight2 span').highlight2({
+    backgroundColor: '#00a8e6',
+    color: '#ffffff'
+});*/
+
+/*$.fn.highlight = function (options) {
+    // 合并默认值和用户设定值:
+    var opts = $.extend({}, $.fn.highlight.defaults, options);
+    this.css('backgroundColor', opts.backgroundColor).css('color', opts.color);
+    return this;
+}
+
+// 设定默认值:
+$.fn.highlight.defaults = {
+    color: '#d85030',
+    backgroundColor: '#fff8de'
+}
+$.fn.highlight.defaults.color = '#fff';
+$.fn.highlight.defaults.backgroundColor = '#000';
+
+$.fn.highlight.defaults.color = '#659f13';
+$.fn.highlight.defaults.backgroundColor = '#f2fae3';
+
+$('#test-highlight p:first-child span').highlight();
+
+$('#test-highlight p:last-child span').highlight({
+    color: '#dd1144'
+});*/
+
+/*我们得出编写一个jQuery插件的原则：
+给$.fn绑定函数，实现插件的代码逻辑；
+插件函数最后要return this;以支持链式调用；
+插件函数要有默认值，绑定在$.fn.<pluginName>.defaults上；
+用户在调用时可传入设定值以便覆盖默认值。*/
+
 
