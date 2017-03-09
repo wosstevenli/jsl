@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="Keywords" content="alex,猜拳小游戏,do while,switch">
+<meta name="Description" content="">
+<meta name="Author" content="alex">
+<title>简单猜拳小游戏</title>
+<style type="text/css">
+*{margin:0;padding:0}
+html,body{
+width:100%;
+height:100%;
+color:#f60;
+font-family:"Microsoft Yahei";
+font-weight:bold;
+font-size:20px;
+}
+.content{
+width:300px;
+height:250px;
+margin:100px auto;
+background:#669933;
+border-radius:8px;
+line-height:170px;
+}
+#box1{
+width:300px;
+height:30px;
+text-align:center;
+}
+#box2{
+width:300px;
+height:30px;
+text-align:center;
+}
+#box3{
+width:300px;
+height:30px;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div class="content">
+<div id="box1"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+</div>
+<script type="text/javascript">
+var user; 
+var computer;
+var res;
+var oBox1 = document.getElementById('box1');
+var oBox2 = document.getElementById('box2');
+var oBox3 = document.getElementById('box3');
+do
+{
+user = parseInt( window.prompt('请出拳：0--石头；1--剪刀；2--布') );
+}
+while ( !(user==0||user==1||user==2) );
+computer = (parseInt(Math.random()*10))%3//电脑产生0、1、2的随机数
+switch ( user )
+{
+case 0 : oBox1.innerHTML = ('您出的是:石头</br>'); 
+break;
+case 1 : oBox1.innerHTML = ('您出的是:剪刀</br>'); 
+break;
+case 2 : oBox1.innerHTML = ('您出的是:布</br>'); 
+break;
+}
+switch ( computer )
+{
+case 0 : oBox2.innerHTML = ('电脑出的是:石头</br>'); 
+break;
+case 1 : oBox2.innerHTML = ('电脑出的是:剪刀</br>'); 
+break;
+case 2 : oBox2.innerHTML = ('电脑出的是:布</br>'); 
+break;
+}
+res = user - computer;
+switch ( res )
+{
+case 0 : oBox3.innerHTML = ('结果是：平手</br>');
+break;
+case -1 :
+case 2 : oBox3.innerHTML = ('结果是：您赢了</br>');
+break;
+case 1 :
+case -2 : oBox3.innerHTML = ('结果是：您输了</br>');
+break;
+}
+</script>
+</body>
+</html>
