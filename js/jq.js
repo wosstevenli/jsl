@@ -254,4 +254,95 @@ $('#test-highlight p:last-child span').highlight({
 插件函数要有默认值，绑定在$.fn.<pluginName>.defaults上；
 用户在调用时可传入设定值以便覆盖默认值。*/
 
+/*var r1,r2,s=null;
+try{
+    r1=s.length;
+    r2=100;
+}
+catch(e){
+    console.log('ERROR:'+e);
+}
+finally{
+    console.log('finally');
+}
+console.log('r1='+r1);
+console.log('r2='+r2);*/
 
+/*var r1,r2,s='null';
+try{
+    r1=s.length;
+    r2=100;
+}
+catch(e){  //变量e表示捕获到的错误
+    console.log('ERROR:'+e);
+}
+finally{
+    console.log('success');
+}
+console.log('r1='+r1);
+console.log('r2='+r2);*/
+
+/*var r,n,s;
+try{
+    s=prompt('请输入一个数字','5');
+    n=parseInt(s);
+    if(isNaN(n)){
+        throw new Error('输入错误@@@@@@！！！！');
+    }
+    r=n*n;
+    alert(n+'*'+n+'='+r);
+}
+catch(e){
+    alert('Error：'+e);
+}
+finally{
+    alert('SUCCESS');
+}*/
+
+/*var n=0,s;
+try {
+    n=s.length;
+}
+catch(e){
+    console.log(e);
+}
+console.log(n);*/
+
+/*var n=0,s;
+try {
+    n=s.length;
+}
+catch(e){
+    //catch捕获错误时，一定要编写错误处理语句,哪怕仅仅把错误打印出来，也不要什么也不干
+    //因为catch到错误却什么都不执行，就不知道程序执行过程中到底有没有发生错误
+}
+console.log(n);*/
+
+/*function getLength(s) {  
+    return s.length;
+}*/
+
+/*
+    function getLength()函数带参数s，及s作为参数到
+    getlength(){
+        s.length
+    }运算
+    getLength('abc')其中函数getlength(s)的参数s='abc'
+*/
+
+/*function getLength(s) {
+    return s.length;
+}
+
+function printLength() {
+    console.log(getLength('abc')); // 3
+    console.log(getLength(null)); // Error!
+}
+
+printLength();*/
+
+function printTime(){
+    console.log('It is time!!!!!');
+}
+setTimeout(printTime,1000);
+console.log('wonderful!');
