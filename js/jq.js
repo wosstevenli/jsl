@@ -341,8 +341,56 @@ function printLength() {
 
 printLength();*/
 
-function printTime(){
+/*function printTime(){
     console.log('It is time!!!!!');
 }
 setTimeout(printTime,1000);
-console.log('wonderful!');
+console.log('wonderful!');*/
+
+/*var a1=[1,4,9,46];
+var a2=a1.map(Math.sqrt);//开平方
+var a3=a2.filter((x)=>{return x%2===0;});
+console.log(a1);
+console.log(a2);
+console.log(a3);*/
+
+/*var obj={
+    name:'bob',
+    school:'一师是个好学校',
+    address:'guizhidao'
+};
+var upper=_.map(obj,function(value,key){
+    return Math.sqrt;
+});*/
+
+/*console.log(_.every([1, 4, 7, -3, -9], (x) => x > 0));
+console.log(_.some([1, 4, 7, -3, -9], (x) => x > 0));*/
+
+/*var arr=[3,5,7,9];
+console.log(_.max(arr));
+console.log(_.min(arr));*/
+
+/*console.log(_.max([]));//空集合返回-Infinity
+console.log(_.min([]));//空集合返回Infinity*/
+
+//console.log(_.max({a:1,b:2,c:3}));
+
+/*var scores=[20,30,40,50,60,70,80,90];
+var groups=_.groupBy(scores,function(x){
+    if(x<60){
+        return 'C';
+    }
+    else if(x<80){
+        return 'B';
+    }
+    else{
+        return 'A'
+    }
+});
+console.log(groups);*/
+
+//console.log(_.shuffle([1, 2, 3, 4, 5, 6]));//洗牌算法随机打乱一个集合
+
+/*console.log(_.sample([1,2,3,4,5,6])); //随机选择一个或多个元素
+console.log(_.sample([1,2,3,4,5,6],2));*/
+
